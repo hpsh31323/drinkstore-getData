@@ -1,0 +1,13 @@
+{
+  "name": "drinkstore-forecasting",
+  "description": "",
+  "version": "0.1.0",
+  "dependencies": {},
+  "scripts": {
+    "deploy": "serverless deploy"
+  },
+  "devDependencies": {
+    "serverless": "^1.74.1",
+    "serverless-python-requirements": "^5.1.0"
+  }
+}
