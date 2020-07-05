@@ -40,7 +40,7 @@ def get_avg_temp_tpi(event, context):
 
     response = {
         "statusCode": 200,
-        "body": json.dumps(myData)
+        "body": "get_avg_temp_tpi"
     }
 
     return response
@@ -70,7 +70,7 @@ def get_order_amount(event, context):
 
     response = {
         "statusCode": 200,
-        "body": json.dumps(dict1)
+        "body": "get_order_amount"
     }
 
     return response
@@ -120,7 +120,20 @@ def get_future_temp(event, context):
 
         response = {
             "statusCode": 200,
-            "body": json.dumps(dict_future_temp)
+            "body": "get_future_temp"
         }
 
         return response
+
+
+# 呼叫機器學習
+def machine_learning(event, context):
+    url = "http://django-env2.eba-xwcfr6xm.ap-southeast-1.elasticbeanstalk.com/forecast"
+    r = requests.get(url=url)
+
+    response = {
+        "statusCode": 200,
+        "body": "machine_learning"
+    }
+
+    return response

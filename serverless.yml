@@ -44,6 +44,17 @@ functions:
           method: get
           async: True
 
+  machine_learning:
+    handler: getData.machine_learning
+    events:
+      - http:
+          path: forecast/machine_learning
+          method: get
+          async: True
+
+
+
+
 
 plugins:
   - serverless-python-requirements
