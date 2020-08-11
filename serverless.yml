@@ -52,6 +52,14 @@ functions:
           method: get
           async: True
 
+  clean_dashboard_data:
+    handler: getData.clean_dashboard_data
+    events:
+      - http:
+          path: forecast/clean_dashboard_data
+          method: get
+          async: True
+
 
 
 
