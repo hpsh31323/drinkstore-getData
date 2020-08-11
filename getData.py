@@ -137,3 +137,16 @@ def machine_learning(event, context):
     }
 
     return response
+
+
+# 呼叫整理dashboard data
+def clean_dashboard_data(event, context):
+    url = "http://drinkstore-dev3.ap-southeast-1.elasticbeanstalk.com/api/managerSystem/dashboard/out_put_to_json"
+    r = requests.get(url=url)
+
+    response = {
+        "statusCode": 200,
+        "body": "clean_dashboard_data"
+    }
+
+    return response
